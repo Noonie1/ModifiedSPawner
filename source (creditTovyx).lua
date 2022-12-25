@@ -114,16 +114,15 @@ Spawner.createEntity = function(config)
             -- EntityTable
 
             local entityTable = {
-                Model = entityModel,
                 Config = config,
                 Debug = {
-                    OnEntitySpawned = function() end,
-                    OnEntityDespawned = function() end,
-                    OnEntityStartMoving = function() end,
-                    OnEntityFinishedRebound = function() end,
-                    OnEntityEnteredRoom = function() end,
-                    OnLookAtEntity = function() end,
-                    OnDeath = function() end
+                    OnEntitySpawned = function(entityModel) end,
+                    OnEntityDespawned = function(entityModel) end,
+                    OnEntityStartMoving = function(entityModel) end,
+                    OnEntityFinishedRebound = function(entityModel) end,
+                    OnEntityEnteredRoom = function(entityModel) end,
+                    OnLookAtEntity = function(entityModel) end,
+                    OnDeath = function(entityModel) end
                 }
             }
 
